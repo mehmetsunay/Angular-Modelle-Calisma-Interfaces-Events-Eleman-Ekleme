@@ -1,0 +1,12 @@
+/* Eğer Bütün Projenin Css lerinin Etkilenmesiniİstiyorsak Bu Kısmı Değiştirmeliyiz */
+/*P taglarının rengının mavi olmasını istememe rağmen bir ezme işlemine maruz kaldık
+sebebi ise app.component.css içerisindeki benzer yapım.
+*/
+
+ @import"~bootstrap/dist/css/bootstrap.min.css";
+
+ 
+p {
+
+color:blue;
+}

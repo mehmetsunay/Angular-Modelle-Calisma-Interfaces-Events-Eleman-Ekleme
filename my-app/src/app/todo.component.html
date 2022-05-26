@@ -1,0 +1,43 @@
+
+<!--SAYFAMI KOLONLARA AYIRDIM KENAR BOŞLUKLARIMI VERDİM GENEL SAYFA BOŞLUĞUM EŞİT OLSUN İSTEDİM-->
+<div class="container">
+<div class="row">
+
+<div class="col-5 mx-auto">
+<h3 class="bg-secondary text-white p-3">
+  {{getName()}} SORUMLULUK LİSTESİ
+</h3>
+<div class ="input-group mb-3">
+<input #txtItem type="text" class="form-control"(keyup.enter)="addItem(txtItem.value)">
+<button class ="btn btn-outline-primary"(click)="addItem(txtItem.value)">Ekle</button>
+</div>
+<div class="form-check mb-3">
+  <input type ="checkbox" class="form-check-input" name=" " id="displayAll">
+  <label for="displayAll" class="form-check-label">Tamamını Göster</label>
+</div>
+
+
+<table class="table table-bordered">
+<thead>
+
+<tr>
+<th></th>
+<th>Sorumluluklar</th>
+<th>Durumu</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let obj of getItems(); let a=index;">
+<td>{{a+1}}</td>
+<td>{{obj.Sorumluluklar}}</td>
+<td>{{obj.Durumu}}</td>
+</tr>
+
+
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
